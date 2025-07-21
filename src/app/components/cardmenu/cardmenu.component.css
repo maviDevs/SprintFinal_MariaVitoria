@@ -1,0 +1,88 @@
+/* --- GERAL --- */
+* {
+  box-sizing: border-box; /* Garante que padding e bordas não afetem o tamanho final dos elementos */
+}
+
+/* --- BOTÕES DE FILTRO --- */
+.botoes-filtro {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 20px;
+  padding: 0 1rem; /* Adiciona um pequeno padding lateral para não colar nas bordas do celular */
+  flex-wrap: wrap; /* ESSENCIAL: Permite que os botões quebrem para a próxima linha em telas pequenas */
+}
+
+.botoes-filtro button {
+  padding: 8px 16px;
+  border: none;
+  background: #ddd;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: background 0.3s;
+}
+
+.botoes-filtro button.ativo,
+.botoes-filtro button:hover {
+  background: #a22;
+  color: #fff;
+}
+
+/* --- GRADE DE CARDS --- */
+.grade-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  /* Padding inicial para telas menores */
+  padding: 2rem 1rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  padding: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra um pouco mais suave */
+  display: flex; /* Ajuda a alinhar o conteúdo verticalmente */
+  flex-direction: column;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+  /* SUBSTITUÍDO: 'height' por 'aspect-ratio' para manter a proporção da imagem */
+  aspect-ratio: 16 / 10; /* Proporção widescreen, ideal para fotos de comida */
+  object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
+}
+
+.card h3 {
+  color: #a22;
+  margin: 8px 0 4px;
+}
+
+.card h4 {
+  margin: 4px 0;
+  /* Garante que o conteúdo do card cresça para preencher o espaço */
+  flex-grow: 1; 
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* --- AJUSTES PARA TELAS MAIORES (TABLETS E DESKTOPS) --- */
+@media (min-width: 768px) {
+  .grade-cards {
+    /* Retorna um padding maior para telas maiores */
+    padding: 2rem 4rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .grade-cards {
+    /* Usa seu padding original para telas bem largas */
+    padding: 2rem 10rem;
+  }
+}

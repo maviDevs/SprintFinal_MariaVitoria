@@ -1,0 +1,52 @@
+git <app-nav-bar></app-nav-bar>
+
+<app-whatsapp></app-whatsapp>
+
+<div class="formulario">
+  <h2>Fale conosco</h2>
+
+  <form (ngSubmit)="enviarFormulario()">
+    <label>Nome:</label>
+    <input type="text" [(ngModel)]="nome" name="nome" required /><br /><br />
+
+    <label>Email:</label>
+    <input type="email" [(ngModel)]="email" name="email" required /><br /><br />
+
+    <label>Número:</label>
+    <input type="text" [(ngModel)]="numero" name="numero" required /><br /><br />
+
+    <label>Mensagem:</label><br />
+    <textarea [(ngModel)]="mensagem" name="mensagem" required></textarea><br /><br />
+
+    <label>
+      <input type="checkbox" [(ngModel)]="aceito" name="aceito" />
+      Aceito os <a href="#">termos de uso</a> e <a href="#">política de privacidade</a>
+    </label><br /><br />
+
+    <button type="submit">Enviar</button>
+  </form>
+
+  <!-- Div com a mensagem -->
+  <div *ngIf="mensagemFinal" [style.color]="corMensagem" style="margin-top: 10px;">
+    {{ mensagemFinal }}
+  </div>
+</div>
+
+<app-footer></app-footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

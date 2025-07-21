@@ -1,0 +1,35 @@
+
+<!-- GRID DE CARDS -->
+<div class="recipe-grid">
+  <div 
+    class="recipe-card" 
+    *ngFor="let recipe of recipes" 
+    (click)="SelecionarReceita(recipe)">
+    <img [src]="recipe.image" [alt]="recipe.title">
+    <p class="date">{{ recipe.date }}</p>
+    <h3>{{ recipe.title }}</h3>
+  </div>
+</div>
+
+<!-- MODAL DE EXPANSÃO -->
+<div class="modal" *ngIf="selectedRecipe">
+  <div class="modal-content">
+    <span class="close" (click)="fecharReceita()">&times;</span>
+    <img [src]="selectedRecipe.image" [alt]="selectedRecipe.title">
+    <h2>{{ selectedRecipe.title }}</h2>
+
+    <h3>Ingredientes:</h3>
+    <ul>
+      <li *ngFor="let ingredient of selectedRecipe.ingredients">{{ ingredient }}</li>
+    </ul>
+
+    <h3>Modo de Preparo:</h3>
+    <ol>
+      <li *ngFor="let step of selectedRecipe.preparation">{{ step }}</li>
+    </ol>
+  </div>
+</div>
+
+
+
+

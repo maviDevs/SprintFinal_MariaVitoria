@@ -1,0 +1,376 @@
+/* ------------amostra healthy food ---------------------------------------------------------- */
+
+.food-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px;
+  gap: 40px;
+  background-color: rgb(228, 212, 193);
+}
+
+.image-container {
+  position: relative;
+  max-width: 400px;
+  flex: 1;
+}
+
+.image-container img {
+  width: 100%;
+  height: 430px;
+  border-radius: 10px;
+  display: block;
+}
+
+.info-card {
+  position: absolute;
+  
+  bottom: 10px;
+  left: 20px;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: calc(100% );
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.info-card h3 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.info-card p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+}
+
+.text-container {
+  max-width: 500px;
+  flex: 1;
+}
+
+.text-container h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.text-container p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.text-container button {
+  padding: 10px 20px;
+  border: 2px solid #333;
+  background: none;
+  color: #333;
+  font-weight: 600;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+.text-container button:hover {
+  background: #333;
+  color: #fff;
+}
+
+
+/* ---  SECTION DO VIDEO PROMOCIONAL--------------------------------------------------------------  */
+
+
+
+.video-section {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem ;
+ 
+}
+
+.meu-video {
+  width: 80%;
+  height: 100%;
+  object-fit: cover;
+  /* filter: brightness(0.4); */
+}
+
+
+
+.card-video {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 20px;
+}
+
+.card-video-menor {
+  max-width: 20rem;
+  text-align: center;
+  border-radius: 11px;
+  
+}
+
+.card-video-menor h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.card-video-menor p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .video-overlay h2 {
+    font-size: 1.5rem;
+  }
+}
+
+
+/* HISTORIA DO RESTAURANTE------------------------------------------------------------------------------------- */
+
+
+.section-historia {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px;
+  max-width: 1200px;
+  margin: auto;
+  gap: 40px;
+
+}
+
+.section-historia-text {
+  flex: 1 1 400px;
+  max-width: 500px;
+}
+
+.section-historia-text h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.section-historia-text p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.div-info-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.div-info-cardizinho {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.div-info-cardizinho:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.div-info-cardizinho h3 {
+  font-size: 1.5rem;
+  color: #b43c3c;
+  margin: 0 0 10px 0;
+}
+
+.div-info-cardizinho p {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0;
+}
+
+.historia-image {
+  flex: 1 1 300px;
+  max-width: 400px;
+}
+
+.historia-image img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+@media (max-width: 900px) {
+  .section-historia {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .section-historia-text, .historia-image {
+    max-width: 90%;
+  }
+  .div-info-cardizinho {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+/* LOCALIDADES DOS RESTAURANTES ------------------------------------------------------------- */
+
+.locations-section {
+  padding: 50px 20px;
+  background-color: #f1e6b2;
+  text-align: center;
+}
+
+.locations-section h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.locations-subtitle {
+  font-size: 0.95rem;
+  color: #555;
+  max-width: 600px;
+  margin: 0 auto 40px auto;
+}
+
+.locations-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.location-card {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 280px;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.location-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.location-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.location-info {
+  padding: 15px;
+}
+
+.location-info h3 {
+  font-size: 1.2rem;
+  margin: 0 0 10px 0;
+  color: #b43c3c;
+}
+
+.location-info p {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 4px 0;
+}
+
+@media (max-width: 900px) {
+  .locations-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+
+
+/* CLIENTES DEPOIMENTOS------------------------------------------------------------  */
+
+
+
+.testimonials-section {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.testimonials-section h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.testimonials-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.testimonial-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px 20px 10px 20px;
+  width: 280px;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.testimonial-card h3 {
+  font-size: 1.1rem;
+  color: #b43c3c;
+  margin-bottom: 15px;
+}
+
+.testimonial-card p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.customer-info {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+  gap: 10px;
+}
+
+.customer-info img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.customer-info strong {
+  font-size: 0.95rem;
+  display: block;
+}
+
+.customer-info p {
+  font-size: 0.8rem;
+  color: #777;
+  margin: 0;
+}

@@ -1,0 +1,17 @@
+
+
+.meu-carrossel {
+  width: 90%;   /* ajuste a largura */
+  height: 350px;  /* ajuste a altura */
+  margin: 0 auto; /* centraliza na página */
+}
+
+.meu-carrossel .carousel-inner,
+.meu-carrossel .carousel-item,
+.meu-carrossel img {
+  height: 100%;
+}
+
+.meu-carrossel img {
+  object-fit: cover;
+}

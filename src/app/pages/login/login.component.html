@@ -1,0 +1,33 @@
+<app-nav-bar></app-nav-bar>
+
+<section class="d-flex justify-content-center align-items-center" style="min-height: 100vh; background-color: #f8f9fa;">
+
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmitLogin()" class="p-5 rounded-4 shadow-sm bg-white"
+    style="max-width: 400px; width: 100%;">
+
+    <h4 class="mb-4 text-center fw-semibold" style="color: #b83c3c;">Login</h4>
+
+    <div class="mb-3">
+      <label for="email" class="form-label text-dark">Email</label>
+      <input formControlName="nome" type="email" id="email" class="form-control rounded-3 border-0 shadow-sm"
+        placeholder="Digite seu email">
+    </div>
+
+    <div class="mb-3">
+      <label for="senha" class="form-label text-dark">Senha</label>
+      <input formControlName="senha" type="password" id="senha" class="form-control rounded-3 border-0 shadow-sm"
+        placeholder="Digite sua senha">
+    </div>
+
+    <button type="submit" class="btn w-100 rounded-3 py-2 fw-semibold"
+      style="background-color: #b83c3c; color: white; border: none;">
+      Entrar
+    </button>
+
+  </form>
+
+</section>
+
+
+
+<app-footer></app-footer>

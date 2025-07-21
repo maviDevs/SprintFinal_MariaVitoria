@@ -1,0 +1,17 @@
+
+<section class="botoes-filtro">
+  <button (click)="filtrarCategoria('Todos')" [class.ativo]="categoriaSelecionada === 'Todos'">Todos</button>
+  <button (click)="filtrarCategoria('Café da Manhã')" [class.ativo]="categoriaSelecionada === 'Café da Manhã'">Café da Manhã</button>
+  <button (click)="filtrarCategoria('Pratos Principais')" [class.ativo]="categoriaSelecionada === 'Pratos Principais'">Pratos Principais</button>
+  <button (click)="filtrarCategoria('Bebidas')" [class.ativo]="categoriaSelecionada === 'Bebidas'">Bebidas</button>
+  <button (click)="filtrarCategoria('Sobremesas')" [class.ativo]="categoriaSelecionada === 'Sobremesas'">Sobremesas</button>
+</section>
+
+<section class="grade-cards">
+  <div *ngFor="let item of itensFiltrados" class="card">
+    <img [src]="item.imagem" [alt]="item.nome" class="card-imagem ">
+    <h3>R$ {{ item.preco }}</h3>
+    <h4>{{ item.nome }}</h4>
+    <p>{{ item.descricao }}</p>
+  </div>
+</section>

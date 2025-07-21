@@ -1,0 +1,116 @@
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fafafa;
+  color: #333;
+}
+
+
+/* titulo da pagina ---------------------------------------------- */
+
+.menu-title-section {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #fff;
+}
+
+.menu-title-section h2 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 15px;
+  color: #212121;
+}
+
+.menu-title-section p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+  .menu-title-section h2 {
+    font-size: 2rem;
+  }
+  .menu-title-section p {
+    font-size: 0.9rem;
+  }
+}
+
+
+/* app de comidas -------------------------------------------- */
+.apps-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 50px 20px;
+  background-color: #fafafa;
+}
+
+.apps-text {
+  flex: 1 1 300px;
+  max-width: 300px;
+}
+
+.apps-text h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #212121;
+}
+
+.apps-text p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.apps-logos {
+  flex: 1 1 400px;
+  display: grid;
+  grid-template-columns: repeat(3, 120px);
+  gap: 20px;
+  justify-content: center;
+}
+
+.app-logo {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  width: 120px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.app-logo img {
+  max-width: 90px;
+  max-height: 60px;
+  object-fit: contain;
+}
+
+.app-logo:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .apps-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  .apps-text {
+    max-width: 100%;
+  }
+  .apps-logos {
+    grid-template-columns: repeat(2, 120px);
+  }
+}
